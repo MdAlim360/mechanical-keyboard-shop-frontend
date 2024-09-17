@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
@@ -21,7 +21,7 @@ function Cart() {
     (state: RootState) => state.cart.items
   ) as unknown as CartItem[];
   const [showCheckout, setShowCheckout] = useState(false);
-
+  console.log(showCheckout);
   // Ensure totalPrice calculation is correct and its type is number
   let totalPrice = items.reduce(
     (total: number, item: CartItem) => total + item.subPrice,

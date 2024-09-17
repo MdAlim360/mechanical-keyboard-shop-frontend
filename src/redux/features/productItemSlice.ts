@@ -19,12 +19,12 @@ const productItemSlice = createSlice({
         addTotalPrice: (state, action: PayloadAction<number>) => {
             state.totalPrice = action.payload;
         },
-        removeFromCart: (state, action: PayloadAction<string>) => {
-            // Placeholder for removeFromCart logic, where 'action.payload' would be the product ID
-        },
+        // removeFromCart: (state, action: PayloadAction<string>) => {
+        //     // Placeholder for removeFromCart logic, where 'action.payload' would be the product ID
+        // },
     },
 });
 
 // Export actions and reducer
-export const { addTotalPrice, removeFromCart } = productItemSlice.actions;
+export const { addTotalPrice, } = productItemSlice.actions;
 export default productItemSlice.reducer;
